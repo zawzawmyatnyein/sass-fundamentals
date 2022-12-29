@@ -1,0 +1,199 @@
+$utilities: (
+    "font-size": (
+        "prefix": "font",
+        "values": (
+            "sm": $font-size-sm,
+            "md": $font-size-md,
+            "lg": $font-size-lg,
+            "xl": $font-size-xl,
+            "2xl": $font-size-2xl
+        )
+    ),
+    "padding": (
+        "prefix": "p",
+        "values": (
+            "0": 0,
+            "1": $spacer * .25,
+            "2": $spacer * .5,
+            "3": $spacer,
+            "4": $spacer * 1.5,
+            "5": $spacer * 3,
+            "auto": auto,
+        )
+    ),
+    "padding-left": (
+        "prefix": "pl",
+        "values": (
+            "0": 0,
+            "1": $spacer * .25,
+            "2": $spacer * .5,
+            "3": $spacer,
+            "4": $spacer * 1.5,
+            "5": $spacer * 3,
+            "auto": auto
+        ),
+    ),
+    "padding-right": (
+        "prefix": "pr",
+        "values": (
+            "0": 0,
+            "1": $spacer * .25,
+            "2": $spacer * .5,
+            "3": $spacer,
+            "4": $spacer * 1.5,
+            "5": $spacer * 3,
+            "auto": auto
+        ),
+    ),
+    "padding-top": (
+        "prefix": "pt",
+        "values": (
+            "0": 0,
+            "1": $spacer * .25,
+            "2": $spacer * .5,
+            "3": $spacer,
+            "4": $spacer * 1.5,
+            "5": $spacer * 3,
+            "auto": auto
+        ),
+    ),
+    "padding-bottom": (
+        "prefix": "pb",
+        "values": (
+            "0": 0,
+            "1": $spacer * .25,
+            "2": $spacer * .5,
+            "3": $spacer,
+            "4": $spacer * 1.5,
+            "5": $spacer * 3,
+            "auto": auto
+        ),
+    ),
+    "margin": (
+        "prefix": "m",
+        "values": (
+            "0": 0,
+            "1": $spacer * .25,
+            "2": $spacer * .5,
+            "3": $spacer,
+            "4": $spacer * 1.5,
+            "5": $spacer * 3,
+            "auto": auto
+        ),
+    ),
+    "margin-left": (
+        "prefix": "ml",
+        "values": (
+            "0": 0,
+            "1": $spacer * .25,
+            "2": $spacer * .5,
+            "3": $spacer,
+            "4": $spacer * 1.5,
+            "5": $spacer * 3,
+            "auto": auto
+        ),
+    ),
+    "margin-right": (
+        "prefix": "mr",
+        "values": (
+            "0": 0,
+            "1": $spacer * .25,
+            "2": $spacer * .5,
+            "3": $spacer,
+            "4": $spacer * 1.5,
+            "5": $spacer * 3,
+            "auto": auto
+        ),
+    ),
+    "margin-top": (
+        "prefix": "mt",
+        "values": (
+            "0": 0,
+            "1": $spacer * .25,
+            "2": $spacer * .5,
+            "3": $spacer,
+            "4": $spacer * 1.5,
+            "5": $spacer * 3,
+            "auto": auto
+        ),
+    ),
+    "margin-bottom": (
+        "prefix": "mb",
+        "values": (
+            "0": 0,
+            "1": $spacer * .25,
+            "2": $spacer * .5,
+            "3": $spacer,
+            "4": $spacer * 1.5,
+            "5": $spacer * 3,
+            "auto": auto
+        ),
+    ),
+    "opacity": (
+        "prefix": "o",
+        "values": (
+            "0": 0,
+            "10": 0.1,
+            "20": 0.2,
+            "30": 0.3,
+            "40": 0.4,
+            "50": 0.5,
+            "60": 0.6,
+            "70": 0.7,
+            "80": 0.8,
+            "90": 0.9,
+            "100": 1,
+        ),
+    ),
+    "border": (
+        "prefix": "border",
+        "values": (
+            "1": $border-width $border-style $border-color,
+            "2": $border-width * 2 $border-style $border-color,
+            "3": $border-width * 3 $border-style $border-color,
+            "4": $border-width * 4 $border-style $border-color,
+            "5": $border-width * 5 $border-style $border-color,
+        )
+    ),
+    "border-radius": (
+        "prefix": "rounded",
+        "values": (
+            "default": $border-radius,
+            "0": 0,
+            "1": $border-radius-sm,
+            "2": $border-radius-lg,
+            "3": $border-radius-xl,
+            "4": $border-radius-2xl,
+            "full": $border-radius-pill,
+        )
+    ),
+    "display": (
+        "prefix": "display",
+        "values": (
+            "n": none,
+            "b": block,
+            "i": inline,
+            "i-b": inline-block,
+            "f": flex,
+        )
+    )
+);
+
+
+// generate utility classes
+@each $propery, $map in $utilities {
+    $prefix: map-get($map, "prefix");
+    $values: map-get($map, "values");
+
+    @each $key, $val in $values {
+        @if($key == "default") {
+            .#{$prefix} {
+                #{$propery}: $val;
+            }
+        } @else {
+            .#{$prefix}-#{$key} {
+                #{$propery}: $val;
+            }
+        }
+    }
+}

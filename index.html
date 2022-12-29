@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/sass/index.scss">
+    <title>Sass Fundamentals</title>
+  </head>
+  <body>
+    <nav class="navbar-primary mb-4">
+        <div class="container">
+            <h2 class="site-title text-light">SASS</h2>
+            <ul class="display-f">
+                <li class="ml-5"><a class="text-light" href="#">Home</a></li>
+                <li class="ml-5"><a class="text-light" href="#">About</a></li>
+                <li class="ml-5"><a class="text-light" href="#">Product</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+   <div class="container">
+
+        <!-- colors -->
+        <h2 class="mb-2">Colors</h2>
+        <span class="text-primary">primary text</span>
+        <span class="text-secondary">secondary text</span>
+        <span class="text-success">success text</span>
+        <span class="text-danger">danger text</span>
+        <span class="text-warning">warning text</span>
+        <span class="text-info">info text</span>
+        <span class="text-light">light text</span>
+        <span class="text-dark">dark text</span>
+        <span class="text-indigo">indigo text</span>
+        <span class="text-pink">pink text</span>
+
+        <br><br>
+
+        <span class="bg-primary text-light">bg primary</span>
+        <span class="bg-secondary text-light">bg secondary</span>
+        <span class="bg-success text-light">bg success</span>
+        <span class="bg-danger text-light">bg danger</span>
+        <span class="bg-warning text-light">bg warning</span>
+        <span class="bg-info text-light">bg info</span>
+        <span class="bg-light text-dark">bg light</span>
+        <span class="bg-dark text-light">bg dark</span>
+        <span class="bg-indigo text-light">bg indigo</span>
+        <span class="bg-purple text-light">bg purple</span>
+        <span class="bg-pink text-light">bg pink</span>
+        <span class="bg-orange text-light">bg orange</span>
+        <span class="bg-teal text-light">bg teal</span>
+
+        <br><br>
+
+        <span class="bg-primary-dark-2 text-light">bg primary dark 2</span>
+        <span class="bg-primary-dark-4 text-light">bg primary dark 4</span>
+        <span class="bg-primary-dark-6 text-light">bg primary dark 6</span>
+        <span class="bg-primary-dark-8 text-light">bg primary dark 8</span>
+        <span class="bg-info-light-2 text-dark">bg info light 2</span>
+        <span class="bg-info-light-4 text-dark">bg info light 4</span>
+        <span class="bg-info-light-6 text-dark">bg info light 6</span>
+        <span class="bg-info-light-8 text-dark">bg info light 8</span>
+
+        <br><br>
+
+        <a href="#" class="text-primary text-hover-success-light-4">hover me</a>
+
+        <hr class="mt-4 mb-4">
+
+        <!-- font sizes  -->
+        <h2 class="mb-2">Font Sizes</h2>
+        <div class="font-sm">this is small font</div>
+        <div class="font-md">this is medium font</div>
+        <div class="font-lg">this is large font</div>
+        <div class="font-xl">this is extra large font</div>
+        <div class="font-2xl">this is extra, extra large font</div>
+
+        <hr class="mt-4 mb-4">
+
+        <!-- buttons -->
+        <h2 class="mb-2">Buttons</h2>
+        <a href="#" class="btn">default btn</a>
+        <a href="#" class="btn-primary text-light">click me</a>
+        <a href="#" class="btn-secondary text-light">click me</a>
+        <a href="#" class="btn-danger text-light">click me</a>
+        <a href="#" class="btn-info">click me</a>
+        <a href="#" class="btn-outline-indigo text-indigo text-hover-light">click me</a>
+        <a href="#" class="btn-outline-pink text-pink text-hover-light">click me</a>
+
+        <hr class="mt-4 mb-4">
+
+        <!-- badges -->
+        <h2 class="mb-2">Badges</h2>
+        <span class="badge">info</span>
+        <span class="badge-primary">primary</span>
+        <span class="badge-secondary">secondary</span>
+        <span class="badge-success">success</span>
+        <span class="badge-danger">danger</span>
+        <span class="badge-warning">warning</span>
+        <span class="badge-purple">purple</span>
+
+        <hr class="mt-4 mb-4">
+
+        <!-- cards  -->
+        <h2 class="mb-2">Cards</h2>
+        <div class="card">
+            <h1 class="card-title">This is a title</h1>
+            <p class="card-body">Lorem ipsum dolor sit <a href="#">amet consectetur</a> adipisicing elit. Obcaecati, doloremque?</p>
+        </div>
+
+        <hr class="mt-4 mb-4">
+
+        <!-- grid system -->
+        <h2 class="mb-2">Grid System</h2>
+        <div class="row gap-2 justify-center">
+            <div class="col-12-xs col-5-sm col-3-xl">
+                <div class="card">
+                    <h3 class="card-title">Hello there</h3>
+                    <p class="card-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, nihil.</p>
+                </div>
+            </div>
+            <div class="col-12-xs col-5-sm col-3-xl">
+                <div class="card">
+                    <h3 class="card-title">Hello there</h3>
+                    <p class="card-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, nihil.</p>
+                </div>
+            </div>
+            <div class="col-12-xs col-5-sm col-3-xl">
+                <div class="card">
+                    <h3 class="card-title">Hello there</h3>
+                    <p class="card-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, nihil.</p>
+                </div>
+            </div>
+            <div class="col-12-xs col-5-sm col-3-xl">
+                <div class="card">
+                    <h3 class="card-title">Hello there</h3>
+                    <p class="card-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, nihil.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="mt-4 mb-4">
+
+         <!-- utilities -->
+         <h2 class="mb-2">Using Utilities</h2c>
+            <div class="mt-2 bg-pink text-light p-3 rounded-4">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, temporibus!</p>
+            </div>
+            <div class="mt-2 border-5 border-pink rounded-3 p-2 display-i-b">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="display-i-b bg-indigo text-light o-10 mt-3 mr-3 p-2">opacity 10</div>
+            <div class="display-i-b bg-indigo text-light o-30 mt-3 mr-3 p-2">opacity 30</div>
+            <div class="display-i-b bg-indigo text-light o-50 mt-3 mr-3 p-2">opacity 50</div>
+            <div class="display-i-b bg-indigo text-light o-70 mt-3 mr-3 p-2">opacity 70</div>
+            <div class="display-i-b bg-indigo text-light o-90 mt-3 mr-3 p-2">opacity 90</div>
+
+            <hr class="mt-4 mb-4">
+
+
+
+
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
